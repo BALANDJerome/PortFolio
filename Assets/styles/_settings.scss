@@ -1,0 +1,14 @@
+$color1: rgb(226, 219, 219);
+$color2: rgb(189, 189, 189);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: $color1;
+}
+li {
+  list-style: none;
+}

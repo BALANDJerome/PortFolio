@@ -1,0 +1,53 @@
+main {
+  .aboutMe {
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 1fr 2fr;
+    div:first-child {
+      margin: 20px;
+      height: 50vh;
+      background: url(../img/website-647013_1920.jpg) left/cover;
+      border-radius: 20px;
+    }
+    div:last-child {
+      margin: auto 20px;
+      letter-spacing: 1px;
+      h3 {
+        margin: 10px 0;
+      }
+    }
+  }
+  .portFolio {
+    background: $color2;
+    box-shadow: rgb(143, 143, 143) 0 0 20px 0;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+    padding: 20px 0;
+    h2 {
+      text-transform: uppercase;
+      margin: 20px auto;
+    }
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 50px;
+      margin: 10px auto;
+      a {
+        height: 300px;
+        width: 200px;
+        border: 2px solid black;
+        padding-bottom: 20px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

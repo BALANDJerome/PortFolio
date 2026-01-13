@@ -1,0 +1,25 @@
+nav {
+  position: fixed;
+  width: 100%;
+  background: $color1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div:first-child {
+    height: 40px;
+    width: 8vh;
+    margin: 3px;
+    background: url(../img/icon.png) center/contain no-repeat;
+  }
+  div:last-child {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      li {
+        margin: 0 20px;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

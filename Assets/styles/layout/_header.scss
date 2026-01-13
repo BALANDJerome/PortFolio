@@ -1,0 +1,12 @@
+header {
+  height: 95vh;
+  display: flex;
+  background: radial-gradient(rgba(0, 0, 0, 0) 50%, $color1 100%),
+    url(../img/laptop-2620118_1920.jpg) center/cover;
+  h1 {
+    margin: 30vh 50px;
+    color: rgb(54, 54, 54);
+    text-shadow: 1.5px 1.5px 2px #ffffff, -1.5px 1.5px 2px #ffffff,
+      -1.5px -1.5px 0px #ffffff, 1.5px -1.5px 0px #ffffff;
+  }
+}
