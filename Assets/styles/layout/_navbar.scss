@@ -17,6 +17,7 @@ nav {
   div:nth-child(2) {
     ul {
       display: flex;
+      align-items: center;
       justify-content: space-around;
       li {
         margin: 0 20px;

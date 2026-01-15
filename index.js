@@ -11,4 +11,9 @@ window.addEventListener("scroll", (e) => {
   }
 });
 
-//navBar.addEventListener("click", () => console.log("ok"));
+const imgFolio = document.querySelectorAll(".portFolio a");
+
+imgFolio.forEach((a) => {
+  let name = a.text.split(" ").join("_");
+  a.style.background = `url(./assets/img/${name}.png) top/cover no-repeat`;
+});
