@@ -1,7 +1,10 @@
 nav {
   position: fixed;
+  transition: 0.3s ease-in-out;
+  top: 0px;
   width: 100%;
   background: $color1;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,7 +14,7 @@ nav {
     margin: 3px;
     background: url(../img/icon.png) center/contain no-repeat;
   }
-  div:last-child {
+  div:nth-child(2) {
     ul {
       display: flex;
       justify-content: space-around;
@@ -21,5 +24,9 @@ nav {
         letter-spacing: 1px;
       }
     }
+  }
+  div:last-child {
+    display: flex;
+    flex-direction: row;
   }
 }

@@ -7,9 +7,12 @@ $color2: rgb(189, 189, 189);
   box-sizing: border-box;
 }
 body {
-  //background: $color1;
-  background: radial-gradient(rgba(0, 0, 0, 0) 50%, $color1 100%),
-    url(../img/laptop-2620118_1920.jpg) center fixed;
+  background: $color1;
+  //background: radial-gradient(rgba(0, 0, 0, 0) 50%, $color1 100%),url(../img/laptop-2620118_1920.jpg) center fixed;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 li {
   list-style: none;
@@ -17,7 +20,5 @@ li {
 section {
   background: $color2;
   box-shadow: rgb(143, 143, 143) 0 0 20px 0;
-  border-radius: 50px;
-  margin: 20px;
   padding: 20px;
 }
