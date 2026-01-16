@@ -1,0 +1,56 @@
+main {
+  .aboutMe {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 70px 0 0;
+    border-radius: 0 30px 80px 0;
+    .imgAboutMe {
+      margin: 20px;
+      height: 400px;
+      background: url(../img/website-647013_1920.jpg) left/cover;
+      border-radius: 20px;
+    }
+    div:last-child {
+      margin: auto 20px;
+      letter-spacing: 1px;
+      height: 60%;
+      div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        h3 {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  .portFolio {
+    margin: 40px 0 40px 70px;
+    border-radius: 80px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-transform: uppercase;
+      margin: 10px auto 20px;
+    }
+    div {
+      width: 100%;
+      max-width: 1500px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+      gap: 50px;
+      a {
+        height: 300px;
+        border: 2px solid black;
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
