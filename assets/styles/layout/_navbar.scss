@@ -13,21 +13,33 @@ nav {
     width: 8vh;
     margin: 3px;
     background: url(../img/icon.png) center/contain no-repeat;
+    cursor: pointer;
   }
   div:nth-child(2) {
     ul {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      li {
+      a {
         margin: 0 20px;
         font-size: 1.2rem;
         letter-spacing: 1px;
+        cursor: pointer;
       }
     }
   }
   div:last-child {
     display: flex;
     flex-direction: row;
+    button {
+      border: 2px solid $color4;
+      border-radius: 20px;
+      padding: 10px;
+      background: none;
+      a {
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+    }
   }
 }
