@@ -23,6 +23,7 @@ footer {
         textarea,
         button {
           border: 1px solid #f59e0b;
+          outline: none;
           border-radius: 10px;
           padding: 5px;
           background: $color1;
@@ -33,7 +34,7 @@ footer {
             color: black;
           }
         }
-        #mail {
+        #email {
           grid-area: 2/1/2/3;
         }
         #message {
@@ -48,6 +49,14 @@ footer {
           margin: 0 auto;
           color: black;
           background: #f59e0b;
+        }
+        #result {
+          font-size: 1.2rem;
+          height: 40px;
+          grid-area: 5/1/5/3;
+        }
+        .error {
+          border: 2px solid red;
         }
       }
     }

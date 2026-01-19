@@ -78,16 +78,17 @@
         </ul>
       </div>
       <div>
-        <form action="">
+        <form action="https://formspree.io/f/xpqqdbav" method="POST">
           <label for="lastName">Votre Nom</label>
-          <input type="text" id="lastName" placeholder="Votre nom">
+          <input type="text" id="lastName" placeholder="Votre nom" name="name">
           <label for="firstName">Votre Prénom</label>
-          <input type="text" id="firstName" placeholder="Votre prénom">
+          <input type="text" id="firstName" placeholder="Votre prénom" name="prénom">
           <label for="mail">Votre Mail</label>
-          <input type="email" id="mail" placeholder="Votre email">
+          <input type="email" id="email" placeholder="Votre email" name="email">
           <label for="message">Votre Message</label>
-          <textarea id="message" placeholder="Votre message..."></textarea>
-          <button type="submit" id="formBtn">Envoyer message</button>
+          <textarea id="message" placeholder="Votre message..." name="message"></textarea>
+          <button type="submit" id="formBtn" disabled>Envoyer message</button>
+          <span id="result"></span>
         </form>
       </div>
       <div>

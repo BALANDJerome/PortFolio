@@ -287,6 +287,7 @@ footer section div:nth-child(2) form input,
 footer section div:nth-child(2) form textarea,
 footer section div:nth-child(2) form button {
   border: 1px solid #f59e0b;
+  outline: none;
   border-radius: 10px;
   padding: 5px;
   background: rgb(226, 219, 219);
@@ -311,7 +312,7 @@ footer section div:nth-child(2) form textarea::placeholder,
 footer section div:nth-child(2) form button::placeholder {
   color: black;
 }
-footer section div:nth-child(2) form #mail {
+footer section div:nth-child(2) form #email {
   grid-area: 2/1/2/3;
 }
 footer section div:nth-child(2) form #message {
@@ -326,6 +327,14 @@ footer section div:nth-child(2) form #formBtn {
   margin: 0 auto;
   color: black;
   background: #f59e0b;
+}
+footer section div:nth-child(2) form #result {
+  font-size: 1.2rem;
+  height: 40px;
+  grid-area: 5/1/5/3;
+}
+footer section div:nth-child(2) form .error {
+  border: 2px solid red;
 }
 footer section div:nth-child(3) {
   grid-area: 2/1/2/3;
