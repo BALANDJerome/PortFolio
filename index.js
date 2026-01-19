@@ -42,6 +42,7 @@ window.addEventListener("scroll", (e) => {
 ////////// Formulaire /////////////////////////////////////
 
 const form = document.querySelector("form");
+const formBtn = document.querySelector("#formBtn");
 
 let lastname, firstname, email, message;
 let dataForm = {};
@@ -60,6 +61,17 @@ const errorDisplay = (tag, message, valid) => {
   } else {
     input.classList.remove("error");
     span.textContent = message;
+  }
+};
+const btnChecked = (valid) => {
+  if (lastname && firstname && email && message) {
+    formBtn.classList.add("btnActive");
+  } else {
+    if (valid == true) {
+      formBtn.textContent = "Message envoyé";
+      formBtn.style.background = "green";
+    }
+    formBtn.classList.remove("btnActive");
   }
 };
 
@@ -81,6 +93,7 @@ inputs.forEach((input) => {
       default:
         null;
     }
+    btnChecked();
   });
 });
 
@@ -145,8 +158,6 @@ const messageChecked = (value) => {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   if (lastname && firstname && email && message) {
-    let message2 = `\`${message}\``;
-    dataForm = { lastname, firstname, email, message2 };
     let data = new FormData(e.target);
     fetch(e.target.action, {
       method: form.method,
@@ -162,13 +173,14 @@ form.addEventListener("submit", async (e) => {
         firstname = null;
         email = null;
         message = null;
+        btnChecked(true);
         form.reset();
       } else {
         submitError("Oups ! Il y a eu un problème.");
       }
     });
   } else {
-    submitError("Veuillez remplir correctement les champs");
+    return;
   }
 });
 

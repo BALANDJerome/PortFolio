@@ -278,7 +278,7 @@ footer section div:nth-child(2) form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin: 20px;
+  margin: 20px 20px 0 20px;
 }
 footer section div:nth-child(2) form label {
   display: none;
@@ -320,15 +320,27 @@ footer section div:nth-child(2) form #message {
   min-height: 100px;
   resize: none;
 }
-footer section div:nth-child(2) form #formBtn {
-  cursor: pointer;
+footer section div:nth-child(2) form button {
   grid-area: 4/1/4/3;
   width: 50%;
+  max-width: 180px;
   margin: 0 auto;
   color: black;
+  border: none;
+  background: gray;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+footer section div:nth-child(2) form .btnActive {
   background: #f59e0b;
+  cursor: pointer;
+}
+footer section div:nth-child(2) form .btnActive:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 footer section div:nth-child(2) form #result {
+  margin: 0 auto;
   font-size: 1.2rem;
   height: 40px;
   grid-area: 5/1/5/3;
