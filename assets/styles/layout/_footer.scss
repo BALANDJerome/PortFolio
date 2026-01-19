@@ -20,8 +20,9 @@ footer {
           display: none;
         }
         input,
-        textarea {
-          border: 1px solid black;
+        textarea,
+        button {
+          border: 1px solid #f59e0b;
           border-radius: 10px;
           padding: 5px;
           background: $color1;
@@ -29,7 +30,7 @@ footer {
           font-weight: 700;
           height: 40px;
           &::placeholder {
-            color: $color4;
+            color: black;
           }
         }
         #mail {
@@ -41,10 +42,12 @@ footer {
           resize: none;
         }
         #formBtn {
+          cursor: pointer;
           grid-area: 4/1/4/3;
           width: 50%;
           margin: 0 auto;
-          color: $color4;
+          color: black;
+          background: #f59e0b;
         }
       }
     }

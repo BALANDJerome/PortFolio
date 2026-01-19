@@ -26,26 +26,26 @@ let positionPortFolio = portFolio.getBoundingClientRect().top;
 window.addEventListener("scroll", (e) => {
   if (window.scrollY == 0) {
     navBar.style.top = "0";
-    btnAccueil.style.color = "rgba(1, 107, 107, 0.438)";
+    btnAccueil.style.color = "#38bdf8";
     btnAboutMe.style.color = "black";
     btnPortFolio.style.color = "black";
   }
   if (window.scrollY > positionAccueil && window.scrollY < positionAboutMe) {
-    //navBar.style.top = "-50px";
-    btnAccueil.style.color = "rgba(1, 107, 107, 0.438)";
+    navBar.style.top = "-50px";
+    btnAccueil.style.color = "#38bdf8";
     btnAboutMe.style.color = "black";
     btnPortFolio.style.color = "black";
   }
   if (window.scrollY >= positionAboutMe && window.scrollY < positionPortFolio) {
     navBar.style.top = "0";
     btnAccueil.style.color = "black";
-    btnAboutMe.style.color = "rgba(1, 107, 107, 0.438)";
+    btnAboutMe.style.color = "#38bdf8";
     btnPortFolio.style.color = "black";
   }
   if (window.scrollY >= positionPortFolio) {
     navBar.style.top = "0";
     btnAccueil.style.color = "black";
     btnAboutMe.style.color = "black";
-    btnPortFolio.style.color = "rgba(1, 107, 107, 0.438)";
+    btnPortFolio.style.color = "#38bdf8";
   }
 });
