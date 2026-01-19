@@ -1,12 +1,5 @@
-///////// Création background portfolio //////////////
-const imgFolio = document.querySelectorAll(".portFolio a");
-
-imgFolio.forEach((a) => {
-  let name = a.text.split(" ").join("_");
-  a.style.background = `url(./assets/img/${name}.png) top/cover no-repeat`;
-});
-
 /////////  Navbar     /////////////////////////////////
+
 const navBar = document.querySelector("nav");
 let positionAccueil = accueil.getBoundingClientRect().top;
 let positionAboutMe = aboutMe.getBoundingClientRect().top;
@@ -37,6 +30,52 @@ window.addEventListener("scroll", (e) => {
     btnAboutMe.style.color = "black";
     btnPortFolio.style.color = "#38bdf8";
   }
+});
+
+////////// Anim title /////////////////////////////////////
+
+const target = document.getElementById("animTitle");
+let array = ["Jerome Baland", "développeur web", "à votre écoute"];
+let wordIndex = 0;
+let letterIndex = 0;
+
+const createLetter = () => {
+  const letter = document.createElement("span");
+  target.appendChild(letter);
+  letter.textContent = array[wordIndex][letterIndex];
+  setTimeout(() => {
+    letter.remove();
+  }, 4000);
+};
+
+const loop = () => {
+  setTimeout(() => {
+    if (wordIndex >= array.length) {
+      wordIndex = 0;
+      letterIndex = 0;
+      loop();
+    } else if (letterIndex < array[wordIndex].length) {
+      createLetter();
+      letterIndex++;
+      loop();
+    } else {
+      wordIndex++;
+      letterIndex = 0;
+      setTimeout(() => {
+        loop();
+      }, 4000);
+    }
+  }, 80);
+};
+loop();
+
+///////// Background portfolio //////////////
+
+const imgFolio = document.querySelectorAll(".portFolio a");
+
+imgFolio.forEach((a) => {
+  let name = a.text.split(" ").join("_");
+  a.style.background = `url(./assets/img/${name}.png) top/cover no-repeat`;
 });
 
 ////////// Formulaire /////////////////////////////////////

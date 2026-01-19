@@ -128,9 +128,10 @@ nav div:last-child button {
   border: 2px solid #38bdf8;
   border-radius: 20px;
   padding: 10px;
-  background: none;
+  background: #38bdf8;
 }
 nav div:last-child button a {
+  color: rgb(226, 219, 219);
   font-size: 1rem;
   letter-spacing: 1px;
 }
@@ -145,19 +146,37 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header div:first-child h1,
-header div:first-child h2 {
+header div:nth-child(1) h1,
+header div:nth-child(1) h2 {
   color: rgb(54, 54, 54);
   text-shadow: 1.5px 1.5px 2px #ffffff, -1.5px 1.5px 2px #ffffff, -1.5px -1.5px 0px #ffffff, 1.5px -1.5px 0px #ffffff;
 }
-header div:first-child h1 {
+header div:nth-child(1) div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header div:nth-child(1) div:nth-child(1) h2 {
   padding-top: 300px;
   font-size: 3rem;
 }
-header div:first-child h2 {
+@media screen and (max-width: 800px) {
+  header div:nth-child(1) div:nth-child(1) h2 {
+    font-size: 1.5rem;
+  }
+}
+header div:nth-child(1) div:nth-child(1) #animTitle {
+  padding-left: 10px;
+}
+header div:nth-child(1) h1 {
   padding-left: 50px;
-  font-size: 5rem;
+  font-size: 2.5rem;
   color: #38bdf8;
+}
+@media screen and (max-width: 870px) {
+  header div:nth-child(1) h1 {
+    font-size: 1.5rem;
+  }
 }
 header .imgHeader {
   position: absolute;
@@ -255,13 +274,26 @@ main .portFolio div a {
   font-size: 1.2rem;
 }
 
-footer section {
+footer section div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+footer section div:nth-child(2) {
   margin: 0;
   border-radius: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-footer section div:nth-child(1) {
+footer section div:nth-child(2) div:nth-child(1) {
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,20 +304,23 @@ footer section div:nth-child(1) {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: auto 0 auto 10vh;
 }
-footer section div:nth-child(2) form {
+footer section div:nth-child(2) div:nth-child(2) form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin: 20px 20px 0 20px;
 }
-footer section div:nth-child(2) form label {
+footer section div:nth-child(2) div:nth-child(2) form label {
   display: none;
 }
-footer section div:nth-child(2) form input,
-footer section div:nth-child(2) form textarea,
-footer section div:nth-child(2) form button {
+footer section div:nth-child(2) div:nth-child(2) form input,
+footer section div:nth-child(2) div:nth-child(2) form textarea,
+footer section div:nth-child(2) div:nth-child(2) form button {
   border: 1px solid #f59e0b;
   outline: none;
   border-radius: 10px;
@@ -295,32 +330,32 @@ footer section div:nth-child(2) form button {
   font-weight: 700;
   height: 40px;
 }
-footer section div:nth-child(2) form input::-webkit-input-placeholder, footer section div:nth-child(2) form textarea::-webkit-input-placeholder, footer section div:nth-child(2) form button::-webkit-input-placeholder {
+footer section div:nth-child(2) div:nth-child(2) form input::-webkit-input-placeholder, footer section div:nth-child(2) div:nth-child(2) form textarea::-webkit-input-placeholder, footer section div:nth-child(2) div:nth-child(2) form button::-webkit-input-placeholder {
   color: black;
 }
-footer section div:nth-child(2) form input::-moz-placeholder, footer section div:nth-child(2) form textarea::-moz-placeholder, footer section div:nth-child(2) form button::-moz-placeholder {
+footer section div:nth-child(2) div:nth-child(2) form input::-moz-placeholder, footer section div:nth-child(2) div:nth-child(2) form textarea::-moz-placeholder, footer section div:nth-child(2) div:nth-child(2) form button::-moz-placeholder {
   color: black;
 }
-footer section div:nth-child(2) form input:-ms-input-placeholder, footer section div:nth-child(2) form textarea:-ms-input-placeholder, footer section div:nth-child(2) form button:-ms-input-placeholder {
+footer section div:nth-child(2) div:nth-child(2) form input:-ms-input-placeholder, footer section div:nth-child(2) div:nth-child(2) form textarea:-ms-input-placeholder, footer section div:nth-child(2) div:nth-child(2) form button:-ms-input-placeholder {
   color: black;
 }
-footer section div:nth-child(2) form input::-ms-input-placeholder, footer section div:nth-child(2) form textarea::-ms-input-placeholder, footer section div:nth-child(2) form button::-ms-input-placeholder {
+footer section div:nth-child(2) div:nth-child(2) form input::-ms-input-placeholder, footer section div:nth-child(2) div:nth-child(2) form textarea::-ms-input-placeholder, footer section div:nth-child(2) div:nth-child(2) form button::-ms-input-placeholder {
   color: black;
 }
-footer section div:nth-child(2) form input::placeholder,
-footer section div:nth-child(2) form textarea::placeholder,
-footer section div:nth-child(2) form button::placeholder {
+footer section div:nth-child(2) div:nth-child(2) form input::placeholder,
+footer section div:nth-child(2) div:nth-child(2) form textarea::placeholder,
+footer section div:nth-child(2) div:nth-child(2) form button::placeholder {
   color: black;
 }
-footer section div:nth-child(2) form #email {
+footer section div:nth-child(2) div:nth-child(2) form #email {
   grid-area: 2/1/2/3;
 }
-footer section div:nth-child(2) form #message {
+footer section div:nth-child(2) div:nth-child(2) form #message {
   grid-area: 3/1/4/3;
   min-height: 100px;
   resize: none;
 }
-footer section div:nth-child(2) form button {
+footer section div:nth-child(2) div:nth-child(2) form button {
   grid-area: 4/1/4/3;
   width: 50%;
   max-width: 180px;
@@ -331,28 +366,28 @@ footer section div:nth-child(2) form button {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-footer section div:nth-child(2) form .btnActive {
+footer section div:nth-child(2) div:nth-child(2) form .btnActive {
   background: #f59e0b;
   cursor: pointer;
 }
-footer section div:nth-child(2) form .btnActive:hover {
+footer section div:nth-child(2) div:nth-child(2) form .btnActive:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-footer section div:nth-child(2) form #result {
+footer section div:nth-child(2) div:nth-child(2) form #result {
   margin: 0 auto;
   font-size: 1.2rem;
   height: 40px;
   grid-area: 5/1/5/3;
 }
-footer section div:nth-child(2) form .error {
+footer section div:nth-child(2) div:nth-child(2) form .error {
   border: 2px solid red;
 }
-footer section div:nth-child(3) {
+footer section div:nth-child(2) div:nth-child(3) {
   grid-area: 2/1/2/3;
   margin: 0 auto;
 }
-footer section div:nth-child(3) img {
+footer section div:nth-child(2) div:nth-child(3) img {
   height: 30px;
   width: 30px;
   margin: 10px;

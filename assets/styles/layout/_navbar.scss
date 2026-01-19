@@ -36,8 +36,9 @@ nav {
       border: 2px solid $color4;
       border-radius: 20px;
       padding: 10px;
-      background: none;
+      background: $color4;
       a {
+        color: $color1;
         font-size: 1rem;
         letter-spacing: 1px;
       }
