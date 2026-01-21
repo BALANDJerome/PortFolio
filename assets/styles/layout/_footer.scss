@@ -37,6 +37,7 @@ footer {
           @media screen and (max-width: 500px) {
             display: flex;
             flex-direction: column;
+            width: 80vw;
           }
           label {
             display: none;
@@ -83,7 +84,8 @@ footer {
             }
           }
           #result {
-            margin: 0 auto;
+            text-align: center;
+            margin: 0 auto 10px;
             font-size: 1.2rem;
             height: 40px;
             grid-area: 5/1/5/3;

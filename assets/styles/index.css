@@ -187,14 +187,15 @@ nav div:first-child {
   }
 }
 nav div:nth-child(2) ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 nav div:nth-child(2) ul li {
   display: -webkit-box;
@@ -524,6 +525,7 @@ footer section div:nth-child(2) div:nth-child(2) form {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 80vw;
   }
 }
 footer section div:nth-child(2) div:nth-child(2) form label {
@@ -587,7 +589,8 @@ footer section div:nth-child(2) div:nth-child(2) form .btnActive:hover {
           transform: scale(1.1);
 }
 footer section div:nth-child(2) div:nth-child(2) form #result {
-  margin: 0 auto;
+  text-align: center;
+  margin: 0 auto 10px;
   font-size: 1.2rem;
   height: 40px;
   grid-area: 5/1/5/3;

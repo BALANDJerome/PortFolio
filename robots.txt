@@ -1,0 +1,5 @@
+On peut communiquer avec le robot de Google sur cette page. On peut surtout lui indiquer de ne pas référencer certaines pages de notre site. https://robots-txt.com/
+
+Exemple:
+User-agent: *
+allow: /
