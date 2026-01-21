@@ -166,12 +166,25 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 460px) {
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 nav div:first-child {
   height: 40px;
   width: 8vh;
   margin: 3px;
   background: url(../img/icon.png) center/contain no-repeat;
   cursor: pointer;
+}
+@media screen and (max-width: 460px) {
+  nav div:first-child {
+    display: none;
+  }
 }
 nav div:nth-child(2) ul {
   display: -webkit-box;
@@ -189,6 +202,7 @@ nav div:nth-child(2) ul li {
   display: flex;
 }
 nav div:nth-child(2) ul a {
+  text-align: center;
   margin: 0 20px;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -233,6 +247,11 @@ nav div:last-child button:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+@media screen and (max-width: 460px) {
+  nav div:last-child button {
+    margin: 10px;
+  }
+}
 
 header {
   height: 880px;
@@ -257,6 +276,11 @@ header div:nth-child(1) div:nth-child(1) h2 {
 @media screen and (max-width: 950px) {
   header div:nth-child(1) div:nth-child(1) h2 {
     font-size: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  header div:nth-child(1) div:nth-child(1) h2 {
+    padding-top: 20vh;
   }
 }
 header div:nth-child(1) div:nth-child(1) #animTitle {
@@ -307,11 +331,17 @@ header div:nth-child(1) div:nth-child(2) button {
 header div:nth-child(1) div:nth-child(2) button a {
   color: #0f172a;
   font-size: 1.8rem;
+  font-weight: 900;
   letter-spacing: 1px;
 }
 header div:nth-child(1) div:nth-child(2) button:hover {
   -webkit-transform: scale(1.05) rotate(-5deg);
           transform: scale(1.05) rotate(-5deg);
+}
+@media screen and (max-width: 500px) {
+  header div:nth-child(1) div:nth-child(2) button a {
+    font-size: 1rem;
+  }
 }
 header .imgHeader {
   position: absolute;
@@ -365,7 +395,11 @@ main .aboutMe div:last-child div {
           justify-content: space-evenly;
 }
 main .aboutMe div:last-child div h3 {
+  text-align: center;
   margin: 10px 0;
+}
+main .aboutMe div:last-child div p {
+  margin: 10px auto;
 }
 main .portFolio {
   margin: 40px 0 40px 70px;
@@ -392,7 +426,20 @@ main .portFolio div {
   grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
   gap: 50px;
 }
+@media screen and (max-width: 550px) {
+  main .portFolio div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px;
+  }
+}
 main .portFolio div a {
+  text-align: center;
   height: 300px;
   border: 3px solid #f59e0b;
   padding: 20px;

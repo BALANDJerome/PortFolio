@@ -13,6 +13,9 @@ header {
         @media screen and (max-width: 950px) {
           font-size: 2rem;
         }
+        @media screen and (max-width: 550px) {
+          padding-top: 20vh;
+        }
       }
       #animTitle {
         padding-left: 10px;
@@ -52,10 +55,16 @@ header {
         a {
           color: $colorVscode;
           font-size: 1.8rem;
+          font-weight: 900;
           letter-spacing: 1px;
         }
         &:hover {
           transform: scale(1.05) rotate(-5deg);
+        }
+        @media screen and (max-width: 500px) {
+          a {
+            font-size: 1rem;
+          }
         }
       }
     }
