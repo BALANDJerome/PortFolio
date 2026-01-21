@@ -1,6 +1,7 @@
 /////////  Navbar     /////////////////////////////////
 
 const navBar = document.querySelector("nav");
+const contactNavbar = document.getElementById("contactNavbar");
 let positionAccueil = accueil.getBoundingClientRect().top;
 let positionAboutMe = aboutMe.getBoundingClientRect().top;
 let positionPortFolio = portFolio.getBoundingClientRect().top;
@@ -11,24 +12,28 @@ window.addEventListener("scroll", (e) => {
     btnAccueil.style.color = "#38bdf8";
     btnAboutMe.style.color = "#f8fafc";
     btnPortFolio.style.color = "#f8fafc";
+    contactNavbar.style.display = "none";
   }
   if (window.scrollY > positionAccueil && window.scrollY < positionAboutMe) {
     navBar.style.top = "-50px";
     btnAccueil.style.color = "#38bdf8";
     btnAboutMe.style.color = "#f8fafc";
     btnPortFolio.style.color = "#f8fafc";
+    contactNavbar.style.display = "none";
   }
   if (window.scrollY >= positionAboutMe && window.scrollY < positionPortFolio) {
     navBar.style.top = "0";
     btnAccueil.style.color = "#f8fafc";
     btnAboutMe.style.color = "#38bdf8";
     btnPortFolio.style.color = "#f8fafc";
+    contactNavbar.style.display = "inline-block";
   }
   if (window.scrollY >= positionPortFolio) {
     navBar.style.top = "0";
     btnAccueil.style.color = "#f8fafc";
     btnAboutMe.style.color = "#f8fafc";
     btnPortFolio.style.color = "#38bdf8";
+    contactNavbar.style.display = "inline-block";
   }
 });
 
@@ -74,7 +79,8 @@ loop();
 const imgFolio = document.querySelectorAll(".portFolio a");
 
 imgFolio.forEach((a) => {
-  let name = a.text.split(" ").join("_");
+  const titleFolio = a.querySelector("h3");
+  let name = titleFolio.textContent.split(" ").join("_");
   a.style.background = `url(./assets/img/${name}.png) top/cover no-repeat`;
 });
 

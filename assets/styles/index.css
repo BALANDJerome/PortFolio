@@ -183,11 +183,22 @@ nav div:nth-child(2) ul {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+nav div:nth-child(2) ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 nav div:nth-child(2) ul a {
   margin: 0 20px;
   font-size: 1.2rem;
   letter-spacing: 1px;
   cursor: pointer;
+}
+@media screen and (max-width: 815px) {
+  nav div:nth-child(2) ul a {
+    font-size: 0.9rem;
+    letter-spacing: normal;
+  }
 }
 nav div:last-child {
   display: -webkit-box;
@@ -199,6 +210,7 @@ nav div:last-child {
           flex-direction: row;
 }
 nav div:last-child button {
+  display: none;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -211,6 +223,11 @@ nav div:last-child button a {
   color: #0f172a;
   font-size: 1rem;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 685px) {
+  nav div:last-child button a {
+    font-size: 0.9rem;
+  }
 }
 nav div:last-child button:hover {
   -webkit-transform: scale(1.1);
@@ -227,35 +244,74 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header div:nth-child(1) h1 {
-  text-shadow: 1.5px 1.5px 2px #f8fafc, -1.5px 1.5px 2px #f8fafc, -1.5px -1.5px 0px #f8fafc, 1.5px -1.5px 0px #f8fafc;
-}
 header div:nth-child(1) div:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 50vh;
 }
 header div:nth-child(1) div:nth-child(1) h2 {
   padding-top: 300px;
   font-size: 3rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   header div:nth-child(1) div:nth-child(1) h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 header div:nth-child(1) div:nth-child(1) #animTitle {
   padding-left: 10px;
 }
-header div:nth-child(1) h1 {
-  padding-left: 50px;
+@media screen and (max-width: 680px) {
+  header div:nth-child(1) div:nth-child(1) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header div:nth-child(1) div:nth-child(1) #animTitle {
+    padding-top: 10px;
+    padding-left: 0;
+  }
+}
+header div:nth-child(1) div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header div:nth-child(1) div:nth-child(2) h1 {
+  text-shadow: 1.5px 1.5px 2px #f8fafc, -1.5px 1.5px 2px #f8fafc, -1.5px -1.5px 0px #f8fafc, 1.5px -1.5px 0px #f8fafc;
+  padding-left: 60px;
   font-size: 2.5rem;
   color: #38bdf8;
 }
 @media screen and (max-width: 870px) {
-  header div:nth-child(1) h1 {
+  header div:nth-child(1) div:nth-child(2) h1 {
     font-size: 1.5rem;
   }
+}
+header div:nth-child(1) div:nth-child(2) button {
+  margin: 150px auto;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border: none;
+  border-radius: 60px;
+  padding: 30px;
+  background: #f59e0b;
+}
+header div:nth-child(1) div:nth-child(2) button a {
+  color: #0f172a;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+header div:nth-child(1) div:nth-child(2) button:hover {
+  -webkit-transform: scale(1.05) rotate(-5deg);
+          transform: scale(1.05) rotate(-5deg);
 }
 header .imgHeader {
   position: absolute;
@@ -272,6 +328,17 @@ main .aboutMe {
   grid-template-columns: 1fr 2fr;
   margin: 0 70px 0 0;
   border-radius: 0 30px 80px 0;
+}
+@media screen and (max-width: 780px) {
+  main .aboutMe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 main .aboutMe .imgAboutMe {
   margin: 20px;
@@ -353,12 +420,32 @@ footer section div:nth-child(1) {
       -ms-flex-pack: center;
           justify-content: center;
   text-transform: uppercase;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 820px) {
+  footer section div:nth-child(1) h2 {
+    font-size: 1rem;
+  }
 }
 footer section div:nth-child(2) {
   margin: 0;
   border-radius: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+@media screen and (max-width: 820px) {
+  footer section div:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 footer section div:nth-child(2) div:nth-child(1) {
   height: 70%;
@@ -375,13 +462,22 @@ footer section div:nth-child(2) div:nth-child(1) {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: auto 0 auto 10vh;
 }
 footer section div:nth-child(2) div:nth-child(2) form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin: 20px 20px 0 20px;
+}
+@media screen and (max-width: 500px) {
+  footer section div:nth-child(2) div:nth-child(2) form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 footer section div:nth-child(2) div:nth-child(2) form label {
   display: none;
@@ -396,7 +492,7 @@ footer section div:nth-child(2) div:nth-child(2) form button {
   background: #f8fafc;
   font-size: 1rem;
   font-weight: 700;
-  height: 40px;
+  min-height: 40px;
 }
 footer section div:nth-child(2) div:nth-child(2) form input::-webkit-input-placeholder, footer section div:nth-child(2) div:nth-child(2) form textarea::-webkit-input-placeholder, footer section div:nth-child(2) div:nth-child(2) form button::-webkit-input-placeholder {
   color: #f59e0b;
@@ -456,8 +552,18 @@ footer section div:nth-child(2) div:nth-child(3) {
   grid-area: 2/1/2/3;
   margin: 0 auto;
 }
-footer section div:nth-child(2) div:nth-child(3) img {
+footer section div:nth-child(2) div:nth-child(3) a {
   height: 30px;
   width: 30px;
   margin: 10px;
+}
+footer section div:nth-child(2) div:nth-child(3) a i {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  font-size: 2.5rem;
+  color: #f59e0b;
+}
+footer section div:nth-child(2) div:nth-child(3) a i:hover {
+  -webkit-transform: scale(1.2) rotate(360deg);
+          transform: scale(1.2) rotate(360deg);
 }/*# sourceMappingURL=index.css.map */

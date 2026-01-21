@@ -3,9 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description"
+    content="Développeur Front-end spécialisé en JavaScript et React. Découvrez mes projets et mon expertise en création d'interfaces web modernes.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PortFolio</title>
+  <title>Jérome | Développeur Front-End & JavaScript</title>
   <link rel="stylesheet" href="./assets/styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
 </head>
 
@@ -24,17 +29,19 @@
       </ul>
     </div>
     <div>
-      <button><a href="#contact">Démarrer un projet</a></button>
+      <button id="contactNavbar"><a href="#contact">Démarrer un projet</a></button>
     </div>
   </nav>
   <header id="accueil">
     <div>
       <div id="accueilTitle">
         <h2>Bonjour, je suis</h2>
-        <h2 id="animTitle"></h2>
+        <h2 id="animTitle">
+        </h2>
       </div>
       <div>
         <h1>Je transforme vos idées en interfaces web</h1>
+        <button><a id="contactHome" href="#contact">Démarrer un projet</a></button>
       </div>
     </div>
     <div class="imgHeader"></div>
@@ -55,21 +62,51 @@
     <section class="portFolio" id="portFolio">
       <h2>Mes réalisations</h2>
       <div>
-        <a href="https://balandjerome.github.io/Mabelacreation/" target="_blank">Mabela Creation</a>
-        <a href="https://balandjerome.github.io/Liste-course" target="_blank">Liste de course</a>
-        <a href="https://balandjerome.github.io/Floppy-bird/" target="_blank">Floppy bird</a>
-        <a href="https://balandjerome.github.io/Country-app/" target="_blank">Country app</a>
-        <a href="https://balandjerome.github.io/Todo-list/" target="_blank">Todo list</a>
-        <a href="https://balandjerome.github.io/Mini-jeu-bulles/" target="_blank">Mini jeu bulles</a>
-        <a href="https://balandjerome.github.io/Color-Generator/" target="_blank">Color Generator</a>
-        <a href="https://balandjerome.github.io/Sidebar/" target="_blank">Sidebar</a>
-        <a href="https://balandjerome.github.io/Scroll-Popup/" target="_blank">Scroll Popup</a>
-        <a href="https://balandjerome.github.io/Generateur-de-bulles/" target="_blank">Generateur de bulles</a>
-        <a href="https://balandjerome.github.io/the-resto/" target="_blank">The resto</a>
-        <a href="https://balandjerome.github.io/Run/" target="_blank">Run</a>
-        <a href="https://balandjerome.github.io/Helium/" target="_blank">Helium</a>
-        <a href="https://balandjerome.github.io/Gaming-Campus/" target="_blank">Gaming Campus</a>
-        <a href="https://balandjerome.github.io/La-Montagne/" target="_blank">La montagne</a>
+        <a href="https://balandjerome.github.io/Mabelacreation/" target="_blank">
+          <h3>Mabela Creation</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Liste-course" target="_blank">
+          <h3>Liste de course</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Floppy-bird/" target="_blank">
+          <h3>Floppy bird</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Country-app/" target="_blank">
+          <h3>Country app</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Todo-list/" target="_blank">
+          <h3>Todo list</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Mini-jeu-bulles/" target="_blank">
+          <h3>Mini jeu bulles</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Color-Generator/" target="_blank">
+          <h3>Color Generator</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Sidebar/" target="_blank">
+          <h3>Sidebar</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Scroll-Popup/" target="_blank">
+          <h3>Scroll Popup</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Generateur-de-bulles/" target="_blank">
+          <h3>Generateur de bulles</h3>
+        </a>
+        <a href="https://balandjerome.github.io/the-resto/" target="_blank">
+          <h3>The resto</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Run/" target="_blank">
+          <h3>Run</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Helium/" target="_blank">
+          <h3>Helium</h3>
+        </a>
+        <a href="https://balandjerome.github.io/Gaming-Campus/" target="_blank">
+          <h3>Gaming Campus</h3>
+        </a>
+        <a href="https://balandjerome.github.io/La-Montagne/" target="_blank">
+          <h3>La montagne</h3>
+        </a>
       </div>
     </section>
   </main>
@@ -105,9 +142,10 @@
           </form>
         </div>
         <div>
-          <a id="mail" href="baland.jerome@gmail.com"><img src="./assets/img/e-mail.png" alt=""></a>
-          <a id="facebook" href="https://www.linkedin.com/in/jérome-baland-5289a63a5" target="_blank"><img
-              src="./assets/img/logo-linkedin.png" alt="logo facebook"></a>
+          <a id="mail" href="baland.jerome@gmail.com"><i class="fa-solid fa-at"></i></a>
+          <a id="linkedin" href="https://www.linkedin.com/in/jérome-baland-5289a63a5" target="_blank"><i
+              class="fa-brands fa-square-linkedin"></i></a>
+          <a id="github" href="https://github.com/BALANDJerome" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
     </section>

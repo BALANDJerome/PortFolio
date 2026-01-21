@@ -4,32 +4,59 @@ header {
   display: flex;
   justify-content: space-between;
   div:nth-child(1) {
-    h1 {
-      text-shadow:
-        1.5px 1.5px 2px $colorWhite,
-        -1.5px 1.5px 2px $colorWhite,
-        -1.5px -1.5px 0px $colorWhite,
-        1.5px -1.5px 0px $colorWhite;
-    }
     div:nth-child(1) {
       display: flex;
+      height: 50vh;
       h2 {
         padding-top: 300px;
         font-size: 3rem;
-        @media screen and (max-width: 800px) {
-          font-size: 1.5rem;
+        @media screen and (max-width: 950px) {
+          font-size: 2rem;
         }
       }
       #animTitle {
         padding-left: 10px;
       }
+      @media screen and (max-width: 680px) {
+        flex-direction: column;
+        #animTitle {
+          padding-top: 10px;
+          padding-left: 0;
+        }
+      }
     }
-    h1 {
-      padding-left: 50px;
-      font-size: 2.5rem;
-      color: $colorReact;
-      @media screen and (max-width: 870px) {
-        font-size: 1.5rem;
+    div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        text-shadow:
+          1.5px 1.5px 2px $colorWhite,
+          -1.5px 1.5px 2px $colorWhite,
+          -1.5px -1.5px 0px $colorWhite,
+          1.5px -1.5px 0px $colorWhite;
+        padding-left: 60px;
+        font-size: 2.5rem;
+        color: $colorReact;
+        @media screen and (max-width: 870px) {
+          font-size: 1.5rem;
+        }
+      }
+      button {
+        margin: 150px auto;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        border: none;
+        border-radius: 60px;
+        padding: 30px;
+        background: $colorJS;
+        a {
+          color: $colorVscode;
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+        }
+        &:hover {
+          transform: scale(1.05) rotate(-5deg);
+        }
       }
     }
   }

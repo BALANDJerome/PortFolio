@@ -4,6 +4,10 @@ main {
     grid-template-columns: 1fr 2fr;
     margin: 0 70px 0 0;
     border-radius: 0 30px 80px 0;
+    @media screen and (max-width: 780px) {
+      display: flex;
+      flex-direction: column;
+    }
     .imgAboutMe {
       margin: 20px;
       height: 400px;

@@ -21,11 +21,18 @@ nav {
       display: flex;
       align-items: center;
       justify-content: space-around;
+      li {
+        display: flex;
+      }
       a {
         margin: 0 20px;
         font-size: 1.2rem;
         letter-spacing: 1px;
         cursor: pointer;
+        @media screen and (max-width: 815px) {
+          font-size: 0.9rem;
+          letter-spacing: normal;
+        }
       }
     }
   }
@@ -33,6 +40,7 @@ nav {
     display: flex;
     flex-direction: row;
     button {
+      display: none;
       transition: 0.3s ease-in-out;
       cursor: pointer;
       border: none;
@@ -43,6 +51,9 @@ nav {
         color: $colorVscode;
         font-size: 1rem;
         letter-spacing: 1px;
+        @media screen and (max-width: 685px) {
+          font-size: 0.9rem;
+        }
       }
       &:hover {
         transform: scale(1.1);
