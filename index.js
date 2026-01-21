@@ -79,8 +79,9 @@ loop();
 const imgFolio = document.querySelectorAll(".portFolio a");
 
 imgFolio.forEach((a) => {
-  const titleFolio = a.querySelector("h3");
-  let name = titleFolio.textContent.split(" ").join("_");
+  let name = a.parentElement.children[1].children[0].textContent
+    .split(" ")
+    .join("_");
   a.style.background = `url(./assets/img/${name}.png) top/cover no-repeat`;
 });
 
