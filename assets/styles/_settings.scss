@@ -1,9 +1,20 @@
-$color1: rgb(226, 219, 219);
-//$color1: #0f172a;
-$color2: rgb(189, 189, 189);
-$color3: rgba(226, 219, 219, 0.7);
-//$color4: rgba(1, 107, 107, 0.438);
-$color4: #38bdf8;
+@font-face {
+  font-family: "roboto";
+  src: url(../fonts/RobotoMono-Regular.ttf);
+}
+@font-face {
+  font-family: "rampart";
+  src: url(../fonts/RampartOne-Regular.ttf);
+}
+
+$colorWhite: #f8fafc;
+$colorGrey: #334155;
+
+$colorReact: #38bdf8;
+$colorJS: #f59e0b;
+$colorNodeJS: #4f9b43;
+$colorHtml: #e34f27;
+$colorVscode: #0f172a;
 
 * {
   margin: 0;
@@ -16,44 +27,81 @@ html {
   overflow-x: hidden;
 }
 body {
+  background: $colorVscode;
   max-width: 100vw;
-  .bg {
-    animation: slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-    background-image: linear-gradient(-60deg, $color3 60%, $color4 40%);
-    bottom: 0;
-    left: -50%;
-    opacity: 0.5;
+  .bg,
+  .bg2,
+  .bg3 {
+    height: 80vh;
+    top: 10vh;
+    width: 15px;
     position: fixed;
-    right: -50%;
-    top: 0;
+    border-radius: 50px;
     z-index: -1;
   }
+  .bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background: $colorJS;
+    box-shadow: 0 0 20px 1px $colorHtml;
+    right: 15%;
+  }
   .bg2 {
-    animation-direction: alternate-reverse;
-    animation-duration: 4s;
+    animation: slide2 10s ease-in-out infinite alternate;
+    background: $colorHtml;
+    box-shadow: 0 0 20px 1px $colorJS;
+    right: 20%;
   }
   .bg3 {
-    animation-duration: 5s;
+    animation: slide3 4s ease-in-out infinite alternate;
+    background: $colorNodeJS;
+    box-shadow: 0 0 20px 1px $colorNodeJS;
+    right: 20%;
   }
   @keyframes slide {
     0% {
-      transform: translateX(-25%);
+      transform: rotate(25deg);
     }
     100% {
-      transform: translateX(25%);
+      transform: rotate(30deg);
+    }
+  }
+  @keyframes slide2 {
+    0% {
+      transform: rotate(-60deg);
+    }
+    100% {
+      transform: rotate(-25deg);
+    }
+  }
+  @keyframes slide3 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-10deg);
     }
   }
 }
+h1,
+h3 {
+  font-family: roboto;
+  color: $colorJS;
+}
+h2 {
+  font-family: rampart;
+  color: $colorJS;
+}
+p,
 a {
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-decoration: none;
-  color: black;
+  color: $colorWhite;
 }
 li {
   list-style: none;
 }
 section {
-  background: $color3;
-  box-shadow: rgb(143, 143, 143) 0 0 20px 0;
+  background: $colorGrey;
+  box-shadow: $colorGrey 0 0 20px 2px;
   padding: 20px;
 }

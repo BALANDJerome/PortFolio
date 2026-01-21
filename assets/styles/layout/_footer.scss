@@ -31,16 +31,16 @@ footer {
           input,
           textarea,
           button {
-            border: 1px solid #f59e0b;
+            border: 1px solid $colorJS;
             outline: none;
             border-radius: 10px;
             padding: 5px;
-            background: $color1;
+            background: $colorWhite;
             font-size: 1rem;
             font-weight: 700;
             height: 40px;
             &::placeholder {
-              color: black;
+              color: $colorJS;
             }
           }
           #email {
@@ -56,13 +56,14 @@ footer {
             width: 50%;
             max-width: 180px;
             margin: 0 auto;
-            color: black;
-            border: none;
-            background: gray;
+            color: $colorVscode;
+            border: 2px solid $colorVscode;
+            background: $colorGrey;
             transition: 0.3s;
+            cursor: not-allowed;
           }
           .btnActive {
-            background: #f59e0b;
+            background: $colorJS;
             cursor: pointer;
             &:hover {
               transform: scale(1.1);

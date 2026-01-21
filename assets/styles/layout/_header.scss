@@ -4,14 +4,12 @@ header {
   display: flex;
   justify-content: space-between;
   div:nth-child(1) {
-    h1,
-    h2 {
-      color: rgb(54, 54, 54);
+    h1 {
       text-shadow:
-        1.5px 1.5px 2px #ffffff,
-        -1.5px 1.5px 2px #ffffff,
-        -1.5px -1.5px 0px #ffffff,
-        1.5px -1.5px 0px #ffffff;
+        1.5px 1.5px 2px $colorWhite,
+        -1.5px 1.5px 2px $colorWhite,
+        -1.5px -1.5px 0px $colorWhite,
+        1.5px -1.5px 0px $colorWhite;
     }
     div:nth-child(1) {
       display: flex;
@@ -29,7 +27,7 @@ header {
     h1 {
       padding-left: 50px;
       font-size: 2.5rem;
-      color: $color4;
+      color: $colorReact;
       @media screen and (max-width: 870px) {
         font-size: 1.5rem;
       }
@@ -43,18 +41,5 @@ header {
     height: 1000px;
     width: 1000px;
     border-radius: 100%;
-    background:
-      radial-gradient(rgba(0, 0, 0, 0) 40%, $color1 100%),
-      url(../img/laptop-2620118_1920.jpg) center/cover;
-    &::after {
-      content: "";
-      position: absolute;
-      border-radius: 100%;
-      height: 1200px;
-      width: 1200px;
-      left: -100px;
-      top: -100px;
-      border: 3px solid rgba(1, 107, 107, 0.438);
-    }
   }
 }

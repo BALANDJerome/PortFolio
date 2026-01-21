@@ -9,25 +9,25 @@ window.addEventListener("scroll", (e) => {
   if (window.scrollY == 0) {
     navBar.style.top = "0";
     btnAccueil.style.color = "#38bdf8";
-    btnAboutMe.style.color = "black";
-    btnPortFolio.style.color = "black";
+    btnAboutMe.style.color = "#f8fafc";
+    btnPortFolio.style.color = "#f8fafc";
   }
   if (window.scrollY > positionAccueil && window.scrollY < positionAboutMe) {
     navBar.style.top = "-50px";
     btnAccueil.style.color = "#38bdf8";
-    btnAboutMe.style.color = "black";
-    btnPortFolio.style.color = "black";
+    btnAboutMe.style.color = "#f8fafc";
+    btnPortFolio.style.color = "#f8fafc";
   }
   if (window.scrollY >= positionAboutMe && window.scrollY < positionPortFolio) {
     navBar.style.top = "0";
-    btnAccueil.style.color = "black";
+    btnAccueil.style.color = "#f8fafc";
     btnAboutMe.style.color = "#38bdf8";
-    btnPortFolio.style.color = "black";
+    btnPortFolio.style.color = "#f8fafc";
   }
   if (window.scrollY >= positionPortFolio) {
     navBar.style.top = "0";
-    btnAccueil.style.color = "black";
-    btnAboutMe.style.color = "black";
+    btnAccueil.style.color = "#f8fafc";
+    btnAboutMe.style.color = "#f8fafc";
     btnPortFolio.style.color = "#38bdf8";
   }
 });

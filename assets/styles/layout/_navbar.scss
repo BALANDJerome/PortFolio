@@ -3,7 +3,8 @@ nav {
   transition: 0.3s ease-in-out;
   top: 0px;
   width: 100%;
-  background: $color3;
+  background: $colorGrey;
+  opacity: 0.9;
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
@@ -32,15 +33,19 @@ nav {
     display: flex;
     flex-direction: row;
     button {
+      transition: 0.3s ease-in-out;
       cursor: pointer;
-      border: 2px solid $color4;
+      border: none;
       border-radius: 20px;
       padding: 10px;
-      background: $color4;
+      background: $colorJS;
       a {
-        color: $color1;
+        color: $colorVscode;
         font-size: 1rem;
         letter-spacing: 1px;
+      }
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }
